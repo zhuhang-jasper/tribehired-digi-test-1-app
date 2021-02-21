@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:4300/api'
+  apiUrl: 'https://tribehired-digi-test-1-api.herokuapp.com/api'
 };
