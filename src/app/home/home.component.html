@@ -7,7 +7,7 @@
         <!-- <a routerLink="add" class="btn btn-sm btn-success mb-2">Add User</a> -->
         <div class="form-group row">
             <div class="col-md-8">
-                <input type="text" [(ngModel)]="filterName" placeholder="Filter by name" class="form-control"/>
+                <input type="text" [(ngModel)]="filterName" placeholder="Enter name as keyword" class="form-control"/>
             </div>
             <div class="col-md-4">
                 <button [disabled]="loading" class="btn btn-primary" (click)="onSearch()">
@@ -20,9 +20,8 @@
             <thead>
                 <tr>
                     <th style="width: 30%">ID</th>
-                    <th style="width: 40%">Name</th>
-                    <th style="width: 30%">Email</th>
-                    <!-- <th style="width: 10%"></th> -->
+                    <th style="width: 35%">Name</th>
+                    <th style="width: 35%">Email</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,13 +29,6 @@
                     <td>{{user.id}}</td>
                     <td>{{user.name}}</td>
                     <td>{{user.email}}</td>
-                    <!-- <td style="white-space: nowrap">
-                        <a routerLink="edit/{{user.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
-                        <button (click)="deleteUser(user.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="user.isDeleting">
-                            <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
-                            <span *ngIf="!user.isDeleting">Delete</span>
-                        </button>
-                    </td> -->
                 </tr>
                 <tr *ngIf="!users">
                     <td colspan="4" class="text-center">
